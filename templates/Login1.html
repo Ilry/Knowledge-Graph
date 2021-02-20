@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="static/Login1Style.css" type="text/css" />
+    <script type="text/javascript">
+        var str1,str2,str3,str4;
+        function valid1()
+        {
+            str1=document.getElementById("useracc").value;
+            str2=document.getElementById("userpwd").value;
+            if(str1==""||str2=="")
+            {
+                alert("你还没有输入内容");
+                return 2;
+            }
+            else
+            {
+                return 1;
+            }
+    
+        }
+        function valid2()
+        {
+            str3=document.getElementById("adminacc").value;
+            str4=document.getElementById("adminpwd").value;
+            if(str3==""||str4=="")
+            {
+                alert("你还没有输入内容");
+                return 2;
+            }
+            else
+            {
+                return 1;
+            }
+    
+        }
+        function sendmessage1()
+        {
+            var a=valid1();
+            if(a==2) 
+                return false;
+            else
+            {
+                document.getElementById("formid").submit();
+                return true;
+            }
+        }
+        function sendmessage2()
+        {
+            var a=valid2();
+            if(a==2) 
+                return false;
+            else
+            {
+                document.getElementById("formid").submit();
+                return true;
+            }
+        }
+        </script>
+</head>
+
+<body>
+    <form action="/" method="post" id="formid" >
+        <div class="container">
+        
+            <div id="f" class="front" >
+                <div class="contents">
+                    <h3 onclick="change1()">USER LOGIN</h3>
+                    <input class="text" type="text" name="useracc" id="useracc" align="center"><br><br>
+                    <input class="text" type="password" name="userpwd" id="userpwd" align="center"><br><br>
+                    <input class="bto" type="submit" name="Login" value="Login" align="center" onclick="sendmessage1()">
+                </div>
+            </div>
+        
+            <div id="b" class="back">
+                <div class="contents">
+                    <h3 onclick="change2()">ADMIN LOGIN</h3>
+                    <input class="text" type="text" name="adminacc" id="adminacc" align="center"><br><br>
+                    <input class="text" type="password" name="adminpwd" id="adminpwd" align="center"><br><br>
+                    <input class="bto" type="submit" name="Login" value="Login" align="center" onclick="sendmessage2()">
+                </div>
+            </div>
+        
+        </div> 
+    </form>
+</body>
+
+<script type="text/javascript">
+    function change1(){
+        var front=document.getElementById("f");
+        var back=document.getElementById("b");
+        front.style.transform="rotateY(-180deg)";
+        back.style.transform="rotateY(0deg)";
+    }
+    function change2(){
+        var front=document.getElementById("f");
+        var back=document.getElementById("b");
+        front.style.transform="rotateY(0deg)";
+        back.style.transform="rotateY(180deg)";
+    }
+</script>
+
+</html>
