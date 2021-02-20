@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+    <category>
+        <pattern>*你好*</pattern>
+        <template>你也好</template>
+    </category>#1
+
+    <category>
+        <pattern>*你是什么*</pattern>
+        <template>我是来自赛博坦星球的汽车人</template>
+    </category>#2
+
+    <category>
+        <pattern>*你叫*</pattern>
+        <template>我叫擎天柱</template>
+    </category>#3
+
+    <category>
+        <pattern>*你的名字*</pattern>
+        <template>我叫擎天柱</template>
+    </category>#4
+    
+    <category>
+        <pattern>*有威震天吗*</pattern>
+        <template>他还没来地球</template>
+    </category>#5
+
+    <category>
+        <pattern>*你的性别*</pattern>
+        <template>汽车人没有性别</template>
+    </category>#6
+
+    <category>
+        <pattern>*你吃过了*</pattern>
+        <template>汽车人不需要吃饭</template>
+    </category>#7
+
+    <category>
+        <pattern>*会什么*</pattern>
+        <template>我会很多东西，我可以和你聊天、可以报时、会简单的四则运算、可以预测当前城市未来几天的天气，你想要试试吗？</template>
+    </category>#8
+
+    <category>
+        <pattern>*那就试试吧*</pattern>
+        <that>我会很多东西，我可以和你聊天、可以报时、会简单的四则运算、可以预测当前城市未来几天的天气，你想要试试吗？</that>
+        <template> 
+            你想问些什么？
+        </template>
+    </category>#9
+
+    <category>
+        <pattern>*那就试试吧*</pattern>
+        <template>你想试什么？</template>
+    </category>#10
+
+    <category>
+    <pattern>*我的名字是*</pattern>
+        <template>
+            我记住你的名字了！
+            <think>
+                <set name="name1"><star index = "2"/></set>
+                 <set name="know">true</set>
+            </think>
+        </template>
+    </category>#11
+
+    <category>
+        <pattern>*我叫什么*</pattern>
+        <template>
+            <condition name="know" value="true">
+                你的名字是：<get name="name1"></get>。
+            </condition>
+            <condition name="know" value="false">
+                抱歉，这是我们第一次见面，我还不知道你的名字。
+            </condition>
+        </template>
+    </category>#12
+
+    <category>
+        <pattern>*我刚刚说*</pattern>
+            <template>
+            你上一句说的：<input index="2"/>
+            </template>
+    </category>#13
+
+    <category>
+        <pattern>*重复我的名字*</pattern>
+        <template> 
+            <get name="name1"></get>
+        </template>
+    </category>#14
+
+    <category><pattern>*问什么*</pattern>
+        <template>
+            你可以这样问：
+            聊聊文学；
+            聊聊游戏；
+        </template>
+    </category>#15
+
+    <category><pattern>*聊什么*</pattern>
+        <template>
+            你可以这样问：聊聊文学、聊聊游戏……
+        </template>
+    </category>#16
+
+    <category><pattern>*多少轮*</pattern>
+        <template>
+            现在有<size/>轮
+        </template>
+    </category>#16
+
+    <category><pattern>*查询：*</pattern>
+        <template>
+            这是搜索结果。
+        </template>
+    </category>#16
+
+    <category>
+        <pattern>*</pattern>
+        <template>这个问题我没办法回答</template>
+    </category>#17
+</aiml>
