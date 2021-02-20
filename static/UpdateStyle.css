@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(background.png);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    background-attachment: fixed;
+}
+div{
+    position: fixed;
+    top: 30%;
+    left: 45%;
+    color: floralwhite;
+    align-items: center;
+}
+textarea{
+    width: 140px;
+    height: 30px;
+    color: floralwhite;
+    border-radius: 10px 10px 10px 10px;
+    background:rgba(0,0,0,0.2);
+}
+.btn{
+    width: 100px;
+    height: 40px;
+    color: floralwhite;
+    background-color: deepskyblue;
+    border-radius: 10px 10px 10px 10px;
+}
+.text{
+    width: 100px;
+    height: 30px;
+    color: floralwhite;
+    border-radius: 10px 10px 10px 10px;
+    background:rgba(0,0,0,0.2);
+}
+.text1{
+    width: 140px;
+    height: 30px;
+    color: floralwhite;
+    border-radius: 10px 10px 10px 10px;
+    background:rgba(0,0,0,0.2);
+}
