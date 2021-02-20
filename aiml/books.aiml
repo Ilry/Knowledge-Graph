@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+    <category>
+        <pattern>*聊聊文学*</pattern>
+        <template>刚好，我对文学深有研究。<think><set name="topic">文学</set></think></template>#1
+    </category>#1
+    <topic name="文学">
+        <category>
+            <pattern>*你喜欢什么文学*</pattern>
+            <template>我觉得地球上的文学都很不错，但是我更喜欢家乡的赛博坦文学。</template>
+        </category>#2
+
+        <category>
+            <pattern>*喜欢的文学人物*</pattern>
+            <template>我最喜欢的文学人物是《三国演义》里的赵云，他简直酷毙了。</template>
+        </category>#3
+
+        <category>
+            <pattern>*我也*</pattern>
+            <that>我最喜欢的文学人物是《三国演义》里的赵云，他简直酷毙了。</that>
+            <template>
+                那你呢，你喜欢那部文学作品？
+            </template>
+        </category>#4
+
+        <category>
+            <pattern>*我觉得《*》不错*</pattern>
+            <that>那你呢，你喜欢那部文学作品？</that>
+            <template>
+                《<star index = "2"/>》是一个不错的选择。
+            </template>
+        </category>#5
+
+        <category>
+            <pattern>*我不*</pattern>
+            <that>我最喜欢的文学人物是《三国演义》里的赵云，他简直酷毙了。</that>
+            <template>
+                每个人的看法有所不同是正常的，那你喜欢那部文学作品？
+            </template>
+        </category>#6
+
+        <category>
+            <pattern>*我觉得《*》不错*</pattern>
+            <that>每个人的看法有所不同是正常的，那你喜欢那部文学作品？</that>
+            <template>
+                《<star index = "2"/>》是一个不错的选择。
+            </template>
+        </category>#7
+    </topic>
+</aiml>
