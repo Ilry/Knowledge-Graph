@@ -12,7 +12,7 @@ import os
 import jieba
 app = Flask(__name__)
 jieba.enable_paddle()
-alice_path = 'C://Tools//VScode Work//Python//aiml'
+alice_path = ''#修改为aiml语料库路径
 os.chdir(alice_path)
 alice = aiml.Kernel()
 alice.learn("startup.xml")
@@ -39,7 +39,7 @@ conn = pymysql.connect(
     host='localhost',
     port=3306,
     user='root',
-    passwd='root',
+    passwd='',#修改为自己的数据库密码
     db='webjob',
     charset='utf8'
 )
@@ -87,7 +87,7 @@ class AnalysisQuestion():
 class Get_answer():
     def __init__(self):
         self.graph = Graph("http://localhost:7474",
-                           username="neo4j", password="3170611042")
+                           username="neo4j", password="")#修改为自己的neo4j密码
 
     def get_data(self, index, params):
         query = ''
@@ -264,7 +264,7 @@ def funsearch(question):
 
 def weather(Msg):
     y = Msg.replace('查询天气：', '')
-    x = 'http://www.tianqiapi.com/api?version=v6&appid=22723956&appsecret=JXcAa1fQ&city='
+    x = ''#添加天气查询api，注册网址：http://www.tianqiapi.com
     r1 = requests.get(x+y)
     r1.encoding = 'utf-8'
     a1 = '查询城市：'+r1.json()['city']+'\t'
