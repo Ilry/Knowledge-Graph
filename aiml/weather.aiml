@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<aiml version="1.0">
-    <category>
-        <pattern>*查询天气：太仓*</pattern>
-        <template>
-            查询城市：太仓	天气：雨	最低温：6°C	最高温：11°C	风向：北风
-        </template>
-    </category>
-</aiml>
