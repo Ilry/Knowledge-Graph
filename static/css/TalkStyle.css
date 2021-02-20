@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url(background.png);
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    background-attachment: fixed;
+}
+h1{
+    text-align: center;
+}
+div{
+    position: fixed;
+    top: 10%;
+    left: 30%;
+}
+textarea{
+    width: 700px;
+    height: 400px;
+    color: floralwhite;
+    border-radius: 20px 20px 20px 20px;
+    background:rgba(0,0,0,0.2);
+}
+input.text{
+    width: 614px;
+    height: 30px;
+    color: floralwhite;
+    border-radius: 10px 10px 10px 10px;
+    background:rgba(0,0,0,0.2);
+}
+input.button{
+    width: 80px;
+    height: 38px;
+    color: floralwhite;
+    background-color: deepskyblue;
+    border-radius: 10px 10px 10px 10px;
+}
+button.bto1{
+    width: 200px;
+    height: 38px;
+    margin-right:50px;
+    color: floralwhite;
+    background-color: deepskyblue;
+    border-radius: 10px 10px 10px 10px;
+}
+button.bto2{
+    width: 200px;
+    height: 38px;
+    margin-right:50px;
+    color: floralwhite;
+    background-color: deepskyblue;
+    border-radius: 10px 10px 10px 10px;
+}
+button.bto3{
+    width: 200px;
+    height: 38px;
+    color: floralwhite;
+    background-color: deepskyblue;
+    border-radius: 10px 10px 10px 10px;
+}
+.back{
+    width: 700px;
+    height: 38px;
+    color: floralwhite;
+    background-color: deepskyblue;
+    border-radius: 10px 10px 10px 10px;
+}
