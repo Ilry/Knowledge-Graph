@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+    <link rel="stylesheet" href="static/TalkStyle.css" type="text/css" />
+    <script type="text/javascript">
+    var str;
+    var num=new Array();
+    
+    function valid()
+    {
+        str=document.getElementById("question").value;
+        if(str=="")
+        {
+            alert("你还没有输入内容");
+            return 2;
+        }
+        else
+        {
+                return 1;
+        }
+
+    }
+
+    function sendmessage()
+    {
+        var a=valid();
+        if(a==2) 
+            return false;
+        else
+        {
+            document.getElementById("formid").submit();
+            return true;
+        }
+    }
+    function changepageLogin()
+    {
+        location.href='/';
+    }
+    </script>
+</head>
+<body>
+    <form action="/user" method="post" id="formid" >
+        <div>
+            <h1>用户界面</h1>
+        <textarea name="talk">  {{result}} </textarea>
+        <br>
+        <input class="text" type="text" name="question" id="question" align="center">
+        <input class="button" type="button" name="btn1" value="发送" align="center" onclick="sendmessage()">
+        <br><br>
+        <input class="back" type="button" name="back" value="退出登录" align="center" onclick="changepageLogin()">
+        </div>
+    </form>
+
+</body>
+</html>>
