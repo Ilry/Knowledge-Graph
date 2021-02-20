@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+    <link rel="stylesheet" href="static/DeleteStyle.css" type="text/css"/>
+    <script type="text/javascript">
+    var str1;
+    function valid()
+    {
+        str1=document.getElementById("symptom").value;
+        if(str1=="")
+        {
+            alert("你还没有输入内容");
+            return 2;
+        }
+        else
+        {
+            return 1;
+        }
+    
+        }
+    
+    function sendmessage()
+    {
+        var a=valid();
+        if(a==2) 
+            return false;
+        else
+        {
+            document.getElementById("formid").submit();
+            return true;
+        }
+    }
+        
+    function changepage()
+    {
+        location.href='/index';
+    }
+    </script>
+</head>
+<body>
+    <form action="/Delete" method="post" id="formid" >
+        <div>
+            <h1>删除症状信息</h1>
+            症状：<input class="text" type="text" name="symptom" id="symptom" align="center"><br>
+            <textarea name="probability">{{result}}</textarea><br><br>
+            <input class="btn" type="button" name="delete" value="删除" align="center" onclick="sendmessage()">
+            <input class="btn" type="button" value="返回" align="center" onclick="changepage()">
+        </div>
+    </form>
+</body>
+</html>
