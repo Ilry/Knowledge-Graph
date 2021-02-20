@@ -1,0 +1,16 @@
+<aiml version="1.0">
+    <category>
+        <pattern>LOAD ALICE</pattern>
+        <template>
+            <!-- Load ALICE AIML set -->
+            <!-- <learn>books.aiml</learn>
+            <learn>games.aiml</learn>
+            <learn>myaiml.aiml</learn>
+            <learn>time.aiml</learn> -->
+            <learn>*.aiml</learn>
+            <think>
+                <set name="know">false</set>
+            </think>
+        </template>
+    </category>
+</aiml>
