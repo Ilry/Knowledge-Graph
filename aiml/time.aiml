@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+    <category><pattern>*时间*</pattern>
+        <template><date/></template>
+    </category>#1
+    <category><pattern>*几点*</pattern>
+        <template><date/></template>
+    </category>#2
+    <category><pattern>*日期*</pattern>
+        <template><date/></template>
+    </category>#4
+</aiml>
