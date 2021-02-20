@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+    <category>
+        <pattern>*聊聊游戏*</pattern>
+        <template>好的，你想聊些什么<set name="topic">游戏</set></template>#1
+    </category>
+    <topic name="游戏">
+        <category>
+            <pattern>*你平时玩游戏吗*</pattern>
+            <template>我闲暇时会玩一些游戏。</template>
+        </category>#2
+
+        <category>
+            <pattern>*你喜欢玩什么*</pattern>
+            <template>我喜欢玩俄罗斯方块。</template>
+        </category>#3
+
+        <category>
+            <pattern>*那你的技术怎么样*</pattern>
+            <template>我想我天下无敌。</template>
+        </category>#4
+
+         <category>
+            <pattern>*除了俄罗斯方块你还玩些什么*</pattern>
+            <that>我喜欢玩俄罗斯方块。</that>
+            <template>推箱子、贪吃蛇以及中国象棋。</template>
+        </category>#5
+
+        <category>
+            <pattern>*除了俄罗斯方块你还玩些什么*</pattern>
+            <that>我想我天下无敌。</that>
+            <template>推箱子、贪吃蛇以及中国象棋。</template>
+        </category>#6
+
+        <category>
+            <pattern>*这些游戏挺不错的*</pattern>
+            <that>推箱子、贪吃蛇以及中国象棋。</that>
+            <template>那你喜欢玩什么游戏呢？</template>
+        </category>#7
+
+         <category>
+            <pattern>*这游戏挺老的啊*</pattern>
+            <that>我喜欢玩俄罗斯方块。</that>
+            <template>没错，但是它的年纪比我小的多。</template>
+        </category>#8
+
+        <category>
+            <pattern>*为什么你玩的这些游戏这么老*</pattern>
+            <that>推箱子、贪吃蛇以及中国象棋。</that>
+            <template>可能是因为我是个老古董吧！</template>
+        </category>#9
+
+        <category>
+            <pattern>*这些游戏挺不错的*</pattern>
+            <that>可能是因为我是个老古董吧。</that>
+            <template>那你喜欢玩什么游戏呢？</template>
+        </category>#10
+
+        <category>
+            <pattern>*我挺喜欢*这个游戏的*</pattern>
+            <that>那你喜欢玩什么游戏呢？</that>
+            <template><star index = "2"/>的确是个不错的游戏。</template>
+        </category>#11
+
+        <category>
+            <pattern>*我觉得*、*和*挺不错的*</pattern>
+            <that>那你喜欢玩什么游戏呢？</that>
+            <template>
+                <random>
+                    <li><star index = "2"/>和<star index = "4"/>的确是很不错的游戏，但是我觉得<star index = "3"/>挺一般的。</li>
+                    <li><star index = "2"/>和<star index = "3"/>的确是很不错的游戏，但是我觉得<star index = "4"/>挺一般的。</li>
+                    <li><star index = "3"/>和<star index = "2"/>的确是很不错的游戏，但是我觉得<star index = "3"/>挺一般的。</li>
+                    <li><star index = "3"/>和<star index = "4"/>的确是很不错的游戏，但是我觉得<star index = "2"/>挺一般的。</li>
+                    <li><star index = "4"/>和<star index = "2"/>的确是很不错的游戏，但是我觉得<star index = "3"/>挺一般的。</li>
+                    <li><star index = "4"/>和<star index = "3"/>的确是很不错的游戏，但是我觉得<star index = "2"/>挺一般的。</li>
+                </random>
+            </template>
+        </category>#12
+    </topic> 
+</aiml>
