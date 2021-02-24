@@ -99,11 +99,11 @@ class Get_answer():
             query = "match(n:Ncz) where n.probability='{}' return  n.symptom;".format(
                 params[0])  # 一概率查一症状
         elif index == 2:
-            query = "match(n:Ncz) return n.symptom;"  # 多症状查多概率
+            query = "match(n:Ncz) return n.symptom;"  #引起脑卒中的症状
             print(query)
         elif index == 3:
             query = "match(n:Ncz) where n.symptom='{}' return  n.symptom;".format(
-                str(params[0]).replace(',', '').replace(' ', '').replace('[', '').replace(']', '').replace("'", ''))  # 简介
+                str(params[0]).replace(',', '').replace(' ', '').replace('[', '').replace(']', '').replace("'", ''))  #症状是否会引发脑卒中
 
         result = self.graph.run(query)
         print(result)
